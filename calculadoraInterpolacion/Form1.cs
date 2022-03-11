@@ -40,7 +40,18 @@ namespace calculadoraInterpolacion
             valor5 = Convert.ToDouble(FX1Box.Text);
             valor6 = Convert.ToDouble(FX2Box.Text);
 
-            tbDisplay.Text = valor0.ToString() + "+" + valor1.ToString() + "+" + valor2.ToString() + "+" + valor3.ToString() + "+" + valor4.ToString() + "+" + valor5.ToString() + "+" + valor6.ToString();
+            if(interpolacion == 1)
+            {
+                //tbDisplay.Text = valor0.ToString() + "+" + valor1.ToString() + "+" + valor2.ToString() + "+" + valor3.ToString() + "+" + valor4.ToString() + "+" + valor5.ToString() + "+" + valor6.ToString();
+                tbDisplay.Text = ((((valor3-valor1) / (valor0-valor1))*((valor3-valor2) / (valor0-valor2))*(valor4)) + 
+                                 (((valor3 - valor0) / (valor1 - valor0)) * ((valor3 - valor2) / (valor1 - valor2)) * (valor5)) + 
+                                 (((valor3 - valor0) / (valor2 - valor0)) * ((valor3 - valor1) / (valor2 - valor1)) * (valor6))).ToString();
+            } else if(interpolacion == 2) {
+                tbDisplay.Text = ((((valor3 - valor1) / (valor0 - valor1)) * valor4) + (((valor3 - valor0) / (valor1 - valor0)) * valor5)).ToString();
+            } else
+            {
+                tbDisplay.Text = "Error, selecciona una sola casilla de interpolacion";
+            }
         }
 
         private void cuadraticaCheck_CheckedChanged(object sender, EventArgs e)
@@ -48,9 +59,11 @@ namespace calculadoraInterpolacion
             //Cuadratica
             if (cuadraticaCheck.Checked == true)
             {
-                interpolacion = 1;
+                interpolacion = interpolacion + 1;
+            } else
+            {
+                interpolacion = 0;
             }
-            interpolacion = 0;
         }
 
         private void linealCheck_CheckedChanged(object sender, EventArgs e)
@@ -58,9 +71,11 @@ namespace calculadoraInterpolacion
             //Lineal
             if (linealCheck.Checked == true)
             {
-                interpolacion = 2;
+                interpolacion = interpolacion + 2;
+            } else
+            {
+                interpolacion = 0;
             }
-            interpolacion = 0;
         }
     }
 }
