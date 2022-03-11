@@ -43,11 +43,11 @@ namespace calculadoraInterpolacion
             if(interpolacion == 1)
             {
                 //tbDisplay.Text = valor0.ToString() + "+" + valor1.ToString() + "+" + valor2.ToString() + "+" + valor3.ToString() + "+" + valor4.ToString() + "+" + valor5.ToString() + "+" + valor6.ToString();
-                tbDisplay.Text = ((((valor3-valor1) / (valor0-valor1))*((valor3-valor2) / (valor0-valor2))*(valor4)) + 
+                tbDisplay.Text = "Resultado de Interpolacion Cuadratica = " + ((((valor3-valor1) / (valor0-valor1))*((valor3-valor2) / (valor0-valor2))*(valor4)) + 
                                  (((valor3 - valor0) / (valor1 - valor0)) * ((valor3 - valor2) / (valor1 - valor2)) * (valor5)) + 
-                                 (((valor3 - valor0) / (valor2 - valor0)) * ((valor3 - valor1) / (valor2 - valor1)) * (valor6))).ToString();
+                                 (((valor3 - valor0) / (valor2 - valor0)) * ((valor3 - valor1) / (valor2 - valor1)) * (valor6))).ToString() + " Aprox.";
             } else if(interpolacion == 2) {
-                tbDisplay.Text = ((((valor3 - valor1) / (valor0 - valor1)) * valor4) + (((valor3 - valor0) / (valor1 - valor0)) * valor5)).ToString();
+                tbDisplay.Text = "Resultado de Interpolacion Lineal = " + ((((valor3 - valor1) / (valor0 - valor1)) * valor4) + (((valor3 - valor0) / (valor1 - valor0)) * valor5)).ToString() + " Aprox";
             } else
             {
                 tbDisplay.Text = "Error, selecciona una sola casilla de interpolacion";

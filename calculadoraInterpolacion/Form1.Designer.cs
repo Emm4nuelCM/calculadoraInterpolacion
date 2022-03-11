@@ -132,6 +132,8 @@
             this.FX2Box.Name = "FX2Box";
             this.FX2Box.Size = new System.Drawing.Size(100, 23);
             this.FX2Box.TabIndex = 17;
+            this.FX2Box.Text = "0";
+            this.FX2Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FX1Box
             // 
@@ -140,6 +142,8 @@
             this.FX1Box.Name = "FX1Box";
             this.FX1Box.Size = new System.Drawing.Size(100, 23);
             this.FX1Box.TabIndex = 16;
+            this.FX1Box.Text = "0";
+            this.FX1Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // FX0Box
             // 
@@ -148,6 +152,8 @@
             this.FX0Box.Name = "FX0Box";
             this.FX0Box.Size = new System.Drawing.Size(100, 23);
             this.FX0Box.TabIndex = 15;
+            this.FX0Box.Text = "0";
+            this.FX0Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label12
             // 
@@ -216,6 +222,8 @@
             this.XBox.Name = "XBox";
             this.XBox.Size = new System.Drawing.Size(100, 23);
             this.XBox.TabIndex = 10;
+            this.XBox.Text = "0";
+            this.XBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // X2Box
             // 
@@ -224,6 +232,8 @@
             this.X2Box.Name = "X2Box";
             this.X2Box.Size = new System.Drawing.Size(100, 23);
             this.X2Box.TabIndex = 9;
+            this.X2Box.Text = "0";
+            this.X2Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // X1Box
             // 
@@ -232,6 +242,8 @@
             this.X1Box.Name = "X1Box";
             this.X1Box.Size = new System.Drawing.Size(100, 23);
             this.X1Box.TabIndex = 8;
+            this.X1Box.Text = "0";
+            this.X1Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // X0Box
             // 
@@ -240,6 +252,8 @@
             this.X0Box.Name = "X0Box";
             this.X0Box.Size = new System.Drawing.Size(100, 23);
             this.X0Box.TabIndex = 7;
+            this.X0Box.Text = "0";
+            this.X0Box.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label8
             // 
@@ -317,7 +331,7 @@
             this.opcionesBox.Controls.Add(this.tipoResultadoBox);
             this.opcionesBox.Controls.Add(this.interpolacionBox);
             this.opcionesBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.opcionesBox.Location = new System.Drawing.Point(12, 194);
+            this.opcionesBox.Location = new System.Drawing.Point(424, 12);
             this.opcionesBox.Name = "opcionesBox";
             this.opcionesBox.Size = new System.Drawing.Size(166, 271);
             this.opcionesBox.TabIndex = 1;
@@ -426,26 +440,27 @@
             // 
             this.resultadosBox.Controls.Add(this.tbDisplay);
             this.resultadosBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.resultadosBox.Location = new System.Drawing.Point(195, 194);
+            this.resultadosBox.Location = new System.Drawing.Point(12, 194);
             this.resultadosBox.Name = "resultadosBox";
-            this.resultadosBox.Size = new System.Drawing.Size(384, 271);
+            this.resultadosBox.Size = new System.Drawing.Size(404, 161);
             this.resultadosBox.TabIndex = 2;
             this.resultadosBox.TabStop = false;
             this.resultadosBox.Text = "RESULTADOS";
             // 
             // tbDisplay
             // 
-            this.tbDisplay.Location = new System.Drawing.Point(27, 41);
+            this.tbDisplay.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tbDisplay.Location = new System.Drawing.Point(6, 28);
             this.tbDisplay.Multiline = true;
             this.tbDisplay.Name = "tbDisplay";
-            this.tbDisplay.Size = new System.Drawing.Size(289, 120);
+            this.tbDisplay.Size = new System.Drawing.Size(387, 120);
             this.tbDisplay.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 471);
+            this.ClientSize = new System.Drawing.Size(597, 360);
             this.Controls.Add(this.resultadosBox);
             this.Controls.Add(this.opcionesBox);
             this.Controls.Add(this.valoresBox);
