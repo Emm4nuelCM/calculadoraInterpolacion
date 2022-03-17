@@ -10,7 +10,6 @@ namespace calculadoraInterpolacion
         private double valor5;
         private double valor6;
         private int interpolacion;
-        private int resultado;
 
 
         public Form1()
@@ -42,40 +41,47 @@ namespace calculadoraInterpolacion
 
             if(interpolacion == 1)
             {
-                //tbDisplay.Text = valor0.ToString() + "+" + valor1.ToString() + "+" + valor2.ToString() + "+" + valor3.ToString() + "+" + valor4.ToString() + "+" + valor5.ToString() + "+" + valor6.ToString();
                 tbDisplay.Text = "Resultado de Interpolacion Cuadratica = " + ((((valor3-valor1) / (valor0-valor1))*((valor3-valor2) / (valor0-valor2))*(valor4)) + 
                                  (((valor3 - valor0) / (valor1 - valor0)) * ((valor3 - valor2) / (valor1 - valor2)) * (valor5)) + 
                                  (((valor3 - valor0) / (valor2 - valor0)) * ((valor3 - valor1) / (valor2 - valor1)) * (valor6))).ToString() + " Aprox.";
             } else if(interpolacion == 2) {
                 tbDisplay.Text = "Resultado de Interpolacion Lineal = " + ((((valor3 - valor1) / (valor0 - valor1)) * valor4) + (((valor3 - valor0) / (valor1 - valor0)) * valor5)).ToString() + " Aprox";
-            } else
-            {
-                tbDisplay.Text = "Error, selecciona una sola casilla de interpolacion";
+
             }
         }
 
-        private void cuadraticaCheck_CheckedChanged(object sender, EventArgs e)
+
+        private void cuadraticaButton_CheckedChanged(object sender, EventArgs e)
         {
             //Cuadratica
-            if (cuadraticaCheck.Checked == true)
+            if (cuadraticaButton.Checked == true)
             {
-                interpolacion = interpolacion + 1;
-            } else
-            {
-                interpolacion = 0;
+                interpolacion = 1;
             }
         }
 
-        private void linealCheck_CheckedChanged(object sender, EventArgs e)
+        private void linealButton_CheckedChanged(object sender, EventArgs e)
         {
             //Lineal
-            if (linealCheck.Checked == true)
+            if (linealButton.Checked == true)
             {
-                interpolacion = interpolacion + 2;
-            } else
-            {
-                interpolacion = 0;
+                interpolacion = 2;
             }
+        }
+
+        private void naturalButton_CheckedChanged(object sender, EventArgs e)
+        {
+            //Naturales
+        }
+
+        private void decimalesButton_CheckedChanged(object sender, EventArgs e)
+        {
+            //Decimales
+        }
+
+        private void tresDecimalButton_CheckedChanged(object sender, EventArgs e)
+        {
+            //3Decimal
         }
     }
 }

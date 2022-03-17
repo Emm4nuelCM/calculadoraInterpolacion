@@ -55,12 +55,12 @@
             this.otroBox = new System.Windows.Forms.GroupBox();
             this.errorRelativoCheck = new System.Windows.Forms.CheckBox();
             this.tipoResultadoBox = new System.Windows.Forms.GroupBox();
-            this.decimalCheck = new System.Windows.Forms.CheckBox();
-            this.redondeadoCheck = new System.Windows.Forms.CheckBox();
-            this.naturalCheck = new System.Windows.Forms.CheckBox();
+            this.tresDecimalButton = new System.Windows.Forms.RadioButton();
+            this.naturalButton = new System.Windows.Forms.RadioButton();
+            this.decimalesButton = new System.Windows.Forms.RadioButton();
             this.interpolacionBox = new System.Windows.Forms.GroupBox();
-            this.linealCheck = new System.Windows.Forms.CheckBox();
-            this.cuadraticaCheck = new System.Windows.Forms.CheckBox();
+            this.cuadraticaButton = new System.Windows.Forms.RadioButton();
+            this.linealButton = new System.Windows.Forms.RadioButton();
             this.resultadosBox = new System.Windows.Forms.GroupBox();
             this.tbDisplay = new System.Windows.Forms.TextBox();
             this.valoresBox.SuspendLayout();
@@ -333,7 +333,7 @@
             this.opcionesBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.opcionesBox.Location = new System.Drawing.Point(424, 12);
             this.opcionesBox.Name = "opcionesBox";
-            this.opcionesBox.Size = new System.Drawing.Size(166, 271);
+            this.opcionesBox.Size = new System.Drawing.Size(166, 279);
             this.opcionesBox.TabIndex = 1;
             this.opcionesBox.TabStop = false;
             this.opcionesBox.Text = "OPCIONES";
@@ -342,7 +342,7 @@
             // 
             this.otroBox.Controls.Add(this.errorRelativoCheck);
             this.otroBox.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.otroBox.Location = new System.Drawing.Point(11, 196);
+            this.otroBox.Location = new System.Drawing.Point(6, 203);
             this.otroBox.Name = "otroBox";
             this.otroBox.Size = new System.Drawing.Size(144, 66);
             this.otroBox.TabIndex = 3;
@@ -361,51 +361,61 @@
             // 
             // tipoResultadoBox
             // 
-            this.tipoResultadoBox.Controls.Add(this.decimalCheck);
-            this.tipoResultadoBox.Controls.Add(this.redondeadoCheck);
-            this.tipoResultadoBox.Controls.Add(this.naturalCheck);
+            this.tipoResultadoBox.Controls.Add(this.tresDecimalButton);
+            this.tipoResultadoBox.Controls.Add(this.naturalButton);
+            this.tipoResultadoBox.Controls.Add(this.decimalesButton);
             this.tipoResultadoBox.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.tipoResultadoBox.Location = new System.Drawing.Point(11, 100);
             this.tipoResultadoBox.Name = "tipoResultadoBox";
-            this.tipoResultadoBox.Size = new System.Drawing.Size(117, 90);
+            this.tipoResultadoBox.Size = new System.Drawing.Size(117, 97);
             this.tipoResultadoBox.TabIndex = 3;
             this.tipoResultadoBox.TabStop = false;
             this.tipoResultadoBox.Text = "TIPO RESULTADO";
             // 
-            // decimalCheck
+            // tresDecimalButton
             // 
-            this.decimalCheck.AutoSize = true;
-            this.decimalCheck.Location = new System.Drawing.Point(13, 67);
-            this.decimalCheck.Name = "decimalCheck";
-            this.decimalCheck.Size = new System.Drawing.Size(87, 17);
-            this.decimalCheck.TabIndex = 2;
-            this.decimalCheck.Text = "3 Decimales";
-            this.decimalCheck.UseVisualStyleBackColor = true;
+            this.tresDecimalButton.AutoSize = true;
+            this.tresDecimalButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.tresDecimalButton.Location = new System.Drawing.Point(13, 71);
+            this.tresDecimalButton.Name = "tresDecimalButton";
+            this.tresDecimalButton.Size = new System.Drawing.Size(80, 19);
+            this.tresDecimalButton.TabIndex = 5;
+            this.tresDecimalButton.TabStop = true;
+            this.tresDecimalButton.Text = "3 Decimal";
+            this.tresDecimalButton.UseVisualStyleBackColor = true;
+            this.tresDecimalButton.CheckedChanged += new System.EventHandler(this.tresDecimalButton_CheckedChanged);
             // 
-            // redondeadoCheck
+            // naturalButton
             // 
-            this.redondeadoCheck.AutoSize = true;
-            this.redondeadoCheck.Location = new System.Drawing.Point(13, 44);
-            this.redondeadoCheck.Name = "redondeadoCheck";
-            this.redondeadoCheck.Size = new System.Drawing.Size(93, 17);
-            this.redondeadoCheck.TabIndex = 1;
-            this.redondeadoCheck.Text = "Redondeado";
-            this.redondeadoCheck.UseVisualStyleBackColor = true;
+            this.naturalButton.AutoSize = true;
+            this.naturalButton.Checked = true;
+            this.naturalButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.naturalButton.Location = new System.Drawing.Point(13, 21);
+            this.naturalButton.Name = "naturalButton";
+            this.naturalButton.Size = new System.Drawing.Size(78, 19);
+            this.naturalButton.TabIndex = 3;
+            this.naturalButton.TabStop = true;
+            this.naturalButton.Text = "Naturales";
+            this.naturalButton.UseVisualStyleBackColor = true;
+            this.naturalButton.CheckedChanged += new System.EventHandler(this.naturalButton_CheckedChanged);
             // 
-            // naturalCheck
+            // decimalesButton
             // 
-            this.naturalCheck.AutoSize = true;
-            this.naturalCheck.Location = new System.Drawing.Point(13, 21);
-            this.naturalCheck.Name = "naturalCheck";
-            this.naturalCheck.Size = new System.Drawing.Size(65, 17);
-            this.naturalCheck.TabIndex = 0;
-            this.naturalCheck.Text = "Natural";
-            this.naturalCheck.UseVisualStyleBackColor = true;
+            this.decimalesButton.AutoSize = true;
+            this.decimalesButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.decimalesButton.Location = new System.Drawing.Point(13, 46);
+            this.decimalesButton.Name = "decimalesButton";
+            this.decimalesButton.Size = new System.Drawing.Size(82, 19);
+            this.decimalesButton.TabIndex = 4;
+            this.decimalesButton.TabStop = true;
+            this.decimalesButton.Text = "Decimales";
+            this.decimalesButton.UseVisualStyleBackColor = true;
+            this.decimalesButton.CheckedChanged += new System.EventHandler(this.decimalesButton_CheckedChanged);
             // 
             // interpolacionBox
             // 
-            this.interpolacionBox.Controls.Add(this.linealCheck);
-            this.interpolacionBox.Controls.Add(this.cuadraticaCheck);
+            this.interpolacionBox.Controls.Add(this.cuadraticaButton);
+            this.interpolacionBox.Controls.Add(this.linealButton);
             this.interpolacionBox.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.interpolacionBox.Location = new System.Drawing.Point(11, 28);
             this.interpolacionBox.Name = "interpolacionBox";
@@ -414,27 +424,30 @@
             this.interpolacionBox.TabStop = false;
             this.interpolacionBox.Text = "INTERPOLACION";
             // 
-            // linealCheck
+            // cuadraticaButton
             // 
-            this.linealCheck.AutoSize = true;
-            this.linealCheck.Location = new System.Drawing.Point(13, 44);
-            this.linealCheck.Name = "linealCheck";
-            this.linealCheck.Size = new System.Drawing.Size(57, 17);
-            this.linealCheck.TabIndex = 1;
-            this.linealCheck.Text = "Lineal";
-            this.linealCheck.UseVisualStyleBackColor = true;
-            this.linealCheck.CheckedChanged += new System.EventHandler(this.linealCheck_CheckedChanged);
+            this.cuadraticaButton.AutoSize = true;
+            this.cuadraticaButton.Location = new System.Drawing.Point(13, 20);
+            this.cuadraticaButton.Name = "cuadraticaButton";
+            this.cuadraticaButton.Size = new System.Drawing.Size(80, 17);
+            this.cuadraticaButton.TabIndex = 3;
+            this.cuadraticaButton.TabStop = true;
+            this.cuadraticaButton.Text = "Cuadratica";
+            this.cuadraticaButton.UseVisualStyleBackColor = true;
+            this.cuadraticaButton.CheckedChanged += new System.EventHandler(this.cuadraticaButton_CheckedChanged);
             // 
-            // cuadraticaCheck
+            // linealButton
             // 
-            this.cuadraticaCheck.AutoSize = true;
-            this.cuadraticaCheck.Location = new System.Drawing.Point(13, 21);
-            this.cuadraticaCheck.Name = "cuadraticaCheck";
-            this.cuadraticaCheck.Size = new System.Drawing.Size(81, 17);
-            this.cuadraticaCheck.TabIndex = 0;
-            this.cuadraticaCheck.Text = "Cuadratica";
-            this.cuadraticaCheck.UseVisualStyleBackColor = true;
-            this.cuadraticaCheck.CheckedChanged += new System.EventHandler(this.cuadraticaCheck_CheckedChanged);
+            this.linealButton.AutoSize = true;
+            this.linealButton.Checked = true;
+            this.linealButton.Location = new System.Drawing.Point(13, 43);
+            this.linealButton.Name = "linealButton";
+            this.linealButton.Size = new System.Drawing.Size(56, 17);
+            this.linealButton.TabIndex = 4;
+            this.linealButton.TabStop = true;
+            this.linealButton.Text = "Lineal";
+            this.linealButton.UseVisualStyleBackColor = true;
+            this.linealButton.CheckedChanged += new System.EventHandler(this.linealButton_CheckedChanged);
             // 
             // resultadosBox
             // 
@@ -460,7 +473,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(597, 360);
+            this.ClientSize = new System.Drawing.Size(984, 582);
             this.Controls.Add(this.resultadosBox);
             this.Controls.Add(this.opcionesBox);
             this.Controls.Add(this.valoresBox);
@@ -511,13 +524,13 @@
         private GroupBox otroBox;
         private CheckBox errorRelativoCheck;
         private GroupBox tipoResultadoBox;
-        private CheckBox decimalCheck;
-        private CheckBox redondeadoCheck;
-        private CheckBox naturalCheck;
         private GroupBox interpolacionBox;
-        private CheckBox linealCheck;
-        private CheckBox cuadraticaCheck;
         private GroupBox resultadosBox;
         private TextBox tbDisplay;
+        private RadioButton cuadraticaButton;
+        private RadioButton linealButton;
+        private RadioButton tresDecimalButton;
+        private RadioButton naturalButton;
+        private RadioButton decimalesButton;
     }
 }
